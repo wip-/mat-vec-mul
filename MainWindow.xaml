@@ -1,0 +1,67 @@
+﻿<Window x:Class="mat_vec_mul.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mat_vec_mul"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="250">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*" Name="SpacingColumn"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.5*" Name="SpacingRow"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="InputVector" Grid.Column="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row ="0" Name="V0" TextChanged="TextChanged">0.0</TextBox>
+            <TextBox Grid.Row ="1" Name="V1" TextChanged="TextChanged">0.0</TextBox>
+            <TextBox Grid.Row ="2" Name="V2" TextChanged="TextChanged">0.0</TextBox>
+            <TextBox Grid.Row ="3" Name="V3" TextChanged="TextChanged">0.0</TextBox>
+        </Grid>
+
+        <TextBox Name="M00" Grid.Column="0" Grid.Row="2" TextChanged="TextChanged">1.0</TextBox>
+        <TextBox Name="M01" Grid.Column="0" Grid.Row="3" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M02" Grid.Column="0" Grid.Row="4" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M03" Grid.Column="0" Grid.Row="5" TextChanged="TextChanged">0.0</TextBox>
+
+        <TextBox Name="M10" Grid.Column="1" Grid.Row="2" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M11" Grid.Column="1" Grid.Row="3" TextChanged="TextChanged">1.0</TextBox>
+        <TextBox Name="M12" Grid.Column="1" Grid.Row="4" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M13" Grid.Column="1" Grid.Row="5" TextChanged="TextChanged">0.0</TextBox>
+
+        <TextBox Name="M20" Grid.Column="2" Grid.Row="2" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M21" Grid.Column="2" Grid.Row="3" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M22" Grid.Column="2" Grid.Row="4" TextChanged="TextChanged">1.0</TextBox>
+        <TextBox Name="M23" Grid.Column="2" Grid.Row="5" TextChanged="TextChanged">0.0</TextBox>
+
+        <TextBox Name="M30" Grid.Column="3" Grid.Row="2" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M31" Grid.Column="3" Grid.Row="3" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M32" Grid.Column="3" Grid.Row="4" TextChanged="TextChanged">0.0</TextBox>
+        <TextBox Name="M33" Grid.Column="3" Grid.Row="5" TextChanged="TextChanged">1.0</TextBox>
+
+        <TextBlock Name="R0" Grid.Column="5" Grid.Row="2" Background="LightBlue">0.0</TextBlock>
+        <TextBlock Name="R1" Grid.Column="5" Grid.Row="3" Background="LightBlue">0.0</TextBlock>
+        <TextBlock Name="R2" Grid.Column="5" Grid.Row="4" Background="LightBlue">0.0</TextBlock>
+        <TextBlock Name="R3" Grid.Column="5" Grid.Row="5" Background="LightBlue">0.0</TextBlock>
+
+        <!--<Button Name="Update" Grid.Row="6" Grid.ColumnSpan="6" Click="Update_Click">Update</Button>-->
+    </Grid>
+</Window>
