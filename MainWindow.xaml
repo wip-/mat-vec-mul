@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mat_vec_mul"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="250">
+        Title="MatVecMul" Height="200" Width="250">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
